@@ -17,3 +17,6 @@ app.listen(PORT);
 //localhost:5000
 //https://evening-meadow-85990.herokuapp.com/
 //https://git.heroku.com/evening-meadow-85990.git
+
+//client ID 17042631237-s24sdgnumv6d662ect3g4ir3itffvcml.apps.googleusercontent.com
+//client secret 7gtlimwgC-tFeBNT5rB_0BEV

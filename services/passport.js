@@ -14,7 +14,20 @@ passport.use(
         /* console.log('access token',accessToken);
         console.log('refresh token',refreshToken);
         console.log('profile',profile); */
+        //find user first
+        User.findOne({ googleID: profile.id})//asynchronous function, return promise
+        .then((existingUser) => {
+            if (existingUser){
+                //already have record with the id
+            }else{
+                //don't have any record...
 
-        new User({ googleID: profile.id }).save();
+                //saves the user data
+                new User({ googleID: profile.id }).save();
+            }
+        }) 
+        
+        
+
     })
 );

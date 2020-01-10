@@ -19,14 +19,19 @@ passport.use(
         .then((existingUser) => {
             if (existingUser){
                 //already have record with the id
+                done(null, existingUser);
             }else{
                 //don't have any record...
 
                 //saves the user data
-                new User({ googleID: profile.id }).save();
+                //asynchronous function
+                new User({ googleID: profile.id })
+                .save()
+                .then(user => done(null,user));
             }
-        }) 
+        })
         
+
         
 
     })
